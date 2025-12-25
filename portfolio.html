@@ -4,405 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="portfolio.css" rel="stylesheet">
     <title>Jainesh | Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-                url('c1.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            padding-top: 120px;
-        }
-
-        /* HEADER */
-        .hero header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 24px 0;
-        }
-
-        .hero nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #2563eb;
-            font-weight: 600;
-        }
-
-        .hero nav a:hover {
-            color: #1d4ed8;
-        }
-
-        /* HERO TEXT */
-        .hero h1 {
-            font-size: clamp(2.2rem, 4vw, 3.2rem);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .socials a {
-            margin-right: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            color: #2563eb;
-        }
-
-        /* CODE BLOCK */
-        .code {
-            background: #020617;
-            padding: 28px;
-            border-radius: 14px;
-            font-family: monospace;
-            font-size: 15px;
-            color: #38bdf8;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .keyword {
-            color: #f472b6;
-        }
-
-        .func {
-            color: #22d3ee;
-        }
-
-        .string {
-            color: #a3e635;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 120px 0;
-        }
-
-        /* STICKY SECTION LABEL */
-        .section-title {
-            position: sticky;
-            top: 80px;
-            /* below header */
-            z-index: 10;
-            background: #ffffff;
-            padding: 12px 0;
-            font-weight: 700;
-        }
-
-        /* optional: subtle separator */
-        .section-title::after {
-            content: "";
-            display: block;
-            height: 3px;
-            width: 60px;
-            margin-top: 8px;
-            background: linear-gradient(90deg, #22d3ee, #2563eb);
-        }
-
-
-        /* EXPERIENCE PINNED SCROLL */
-        #experience {
-            position: relative;
-            padding: 0;
-        }
-
-        /* This pins the section */
-        .experience-pin {
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: #ffffff;
-        }
-
-        /* This creates internal scrolling */
-        .experience-wrapper {
-            height: 70vh;
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-
-        /* Hide scrollbar (optional) */
-        .experience-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* EXPERIENCE SECTION */
-        .experience-section {
-            position: relative;
-            padding: 140px 0;
-        }
-
-        /* Sticky title */
-        /* .experience-title {
-            position: sticky;
-            top: 80px;
-            z-index: 15;
-            background: #ffffff;
-            padding-bottom: 16px;
-            margin-bottom: 0;
-            font-weight: 700;
-        } */
-
-
-
-        .experience-title-pin {
-            position: sticky;
-            top: 0;
-            background: #ffffff;
-            z-index: 20;
-            padding-bottom: 16px;
-        }
-
-        .experience-title::after {
-            content: "";
-            display: block;
-            height: 4px;
-            width: 100%;
-            margin-top: 12px;
-            background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
-        }
-
-        /* Stack container */
-        .experience-stack {
-            position: relative;
-            padding-top: 40px;
-            /* space below title + line */
-            padding-bottom: 200px;
-            /* space so last card can unstick */
-        }
-
-
-
-        .experience-cards {
-            position: relative;
-            padding-top: 40px;
-        }
-
-
-        /* Sticky overlapping cards */
-        .experience-card {
-            position: sticky;
-            top: 180px;
-            /* below title + gradient line */
-            margin-bottom: 80px;
-            /* SAME GAP BETWEEN ALL CARDS */
-            border-radius: 16px;
-            background: #f8fafc;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-
-
-        @media (max-width: 768px) {
-            .experience-card {
-                position: relative;
-                top: auto !important;
-                margin-bottom: 40px;
-            }
-        }
-
-
-
-        /* Header */
-        .experience-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: #020617;
-            color: white;
-            padding: 16px 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .experience-header-pin {
-            position: sticky;
-            top: 0;
-            background: #ffffff;
-            z-index: 10;
-            padding-bottom: 20px;
-        }
-
-
-        .experience-header img {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-        }
-
-        /* Line */
-        .experience-line {
-            height: 4px;
-            background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
-        }
-
-        .experience-header h4 {
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .experience-card .code {
-            margin: 0;
-            padding: 28px;
-            border-radius: 0;
-            box-shadow: none;
-        }
-
-        /* =======================
-   SKILLS – SAME AS EXPERIENCE
-======================= */
-
-#skills {
-    min-height: 180vh; /* THIS IS THE KEY */
-    background: #f8fafc;
-    position: relative;
-    padding-top: 0 !important;
-    padding-bottom: 140px;
-}
-
-#skills h2 {
-    margin: 0;
-}
-
-
-/* Sticky Skills Title */
-/* =======================
-   SKILLS – SAME AS EXPERIENCE
-======================= */
-
-.skills-title-pin {
-    position: sticky;
-    top: 0px;
-    z-index: 20;
-    background: #f8fafc;
-    padding-bottom: 16px;
-}
-
-
-
-
-.skills-title {
-    font-weight: 700;
-}
-
-.skills-title::after {
-    content: "";
-    display: block;
-    height: 4px;
-    width: 100%;
-    margin-top: 12px;
-    background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
-}
-
-
-/* Stack container */
-.skills-stack {
-    position: relative;
-    padding-top: 40px;
-    padding-bottom: 300px;
-}
-
-/* Sticky cards */
-.skill-card {
-    position: sticky;
-    top: 180px;
-    margin-bottom: 80px;
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Mobile fallback */
-@media (max-width: 768px) {
-    .skill-card {
-        position: relative;
-        top: auto;
-        margin-bottom: 40px;
-    }
-}
-
-
-
-        .contact-btn {
-            border-radius: 6px !important;
-            font-weight: 600;
-            margin-top: 20px;
-        }
-
-        .card-custom {
-            background: #f8fafc;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-        }
-
-        /* ABOUT IMAGE HOVER */
-        .about-img {
-            max-width: 320px;
-            border-radius: 16px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .about-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-        }
-
-        /* ABOUT ME TAG ONLY */
-        .about-tag {
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            font-weight: 700;
-            letter-spacing: 2px;
-            font-size: 14px;
-            color: white;
-            background-color: #440E03;
-            padding: 10px 8px;
-            border-radius: 8px;
-            margin-right: 20px;
-        }
-
-        .about-me-container h2,
-        .about-me-container p {
-            color: #ffffff;
-        }
-
-        /* SCROLL ANIMATION */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
 
 <body>
@@ -434,11 +40,12 @@
                         I TURN IDEAS INTO CODE.
                     </h1>
                     <div class="socials d-flex align-items-center gap-3 mb-4">
-                        <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/jaineshpancholi" target="_blank" aria-label="GitHub">
                             <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"
                                 width="32" height="32">
                         </a>
-                        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/jainesh-pancholi-331612211/" target="_blank"
+                            aria-label="LinkedIn">
                             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32"
                                 height="32">
                         </a>
@@ -522,7 +129,7 @@
                 <!-- CARD 2 -->
                 <div class="experience-card">
                     <div class="experience-header">
-                        <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" width="44" alt="Company">
+                        <img src="assests/svg/skills/javascript.svg" width="44" alt="Company">
                         <div>
                             <h4>Innovate Labs</h4>
                             <small>2020 – 2022</small>
@@ -542,7 +149,7 @@
                 <!-- CARD 3 -->
                 <div class="experience-card">
                     <div class="experience-header">
-                        <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" width="44" alt="Company">
+                        <img src="assests/svg/skills/javascript.svg" width="44" alt="Company">
                         <div>
                             <h4>Innovate Labs</h4>
                             <small>2020 – 2022</small>
@@ -567,25 +174,96 @@
 
     <!-- SKILLS -->
     <section id="skills">
-    <div class="container">
+        <div class="container">
 
-        <!-- STICKY TITLE -->
-        <div class="skills-title-pin">
-            <h2 class="skills-title">Skills</h2>
+            <!-- STICKY TITLE -->
+            <div class="skills-title-pin">
+                <h2 class="skills-title">Skills</h2>
+            </div>
+
+            <!-- SCROLL SPACE -->
+            <div class="skills-track">
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/html.svg" alt="HTML">
+                    <span>HTML</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/css.svg" alt="CSS">
+                    <span>CSS</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/microsoftoffice.svg" alt="MS Office">
+                    <span>MS Office</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/typescript.svg" alt="TypeScript">
+                    <span>TypeScript</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/git.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/bootstrap.svg" alt="Bootstrap">
+                    <span>Bootstrap</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/javascript.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/react.svg" alt="React">
+                    <span>React</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/postgresql.svg" alt="PostgreSQL">
+                    <span>PostgreSQL</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/python.svg" alt="python">
+                    <span>python</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/django.svg" alt="Django">
+                    <span>Django</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/mongoDB.svg" alt="MongoDB">
+                    <span>MongoDB</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/Node.js.svg" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/mysql.svg" alt="MySQL">
+                    <span>MySQL</span>
+                </div>
+
+                <div class="skill-card">
+                    <img src="assests/svg/skills/aws.svg" alt="AWS">
+                    <span>AWS</span>
+                </div>
+
+            </div>
+
         </div>
+    </section>
 
-        <!-- STACK -->
-        <div class="skills-stack">
-
-            <div class="skill-card">JavaScript, React, TypeScript</div>
-            <div class="skill-card">Python, Django, REST APIs</div>
-            <div class="skill-card">SQL, PostgreSQL, MongoDB</div>
-            <div class="skill-card">Git, GitHub, CI/CD</div>
-            <div class="skill-card">Docker, Linux, Deployment</div>
-
-        </div>
-    </div>
-</section>
 
 
 
@@ -593,18 +271,32 @@
     <!-- PROJECTS -->
     <section id="projects">
         <div class="container">
-            <h2 class="mb-4">Projects</h2>
-            <div class="card-custom">AI Dashboard, FinTech Platform, E-commerce System</div>
-            <div class="mt-5">
-                <div class="card-custom mb-4">JavaScript, React, Python</div>
-                <div class="card-custom mb-4">Django, REST APIs</div>
-                <div class="card-custom mb-4">SQL, MongoDB</div>
-                <!-- <div class="card-custom mb-4">JavaScript, React, Python</div> -->
-                <div class="card-custom mb-4">Django, REST APIs</div>
-                <div class="card-custom mb-4">SQL, MongoDB</div>
+
+            <!-- STICKY TITLE -->
+            <div class="projects-title-pin">
+                <h2 class="projects-title">Projects</h2>
             </div>
+
+            <!-- STACK -->
+            <div class="projects-stack">
+
+                <div class="project-card">
+                    AI Dashboard – React, Chart.js, REST APIs
+                </div>
+
+                <div class="project-card">
+                    FinTech Platform – Django, PostgreSQL, JWT Auth
+                </div>
+
+                <div class="project-card">
+                    E-commerce System – React, Stripe, Admin Panel
+                </div>
+
+            </div>
+
         </div>
     </section>
+
 
     <!-- EDUCATION -->
     <section id="education" class="bg-light">
@@ -615,26 +307,41 @@
     </section>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+const reveals = document.querySelectorAll(".reveal");
 
-        const reveals = document.querySelectorAll(".reveal");
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    }
-                });
-            },
-            {
-                threshold: 0.15
+// Reveal animation
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
             }
-        );
+        });
+    },
+    { threshold: 0.15 }
+);
+reveals.forEach((el) => observer.observe(el));
 
-        reveals.forEach((el) => observer.observe(el));
-    </script>
+// Auto-scroll Skills section
+const track = document.querySelector(".skills-track");
+let scrollAmount = 0;
+
+function autoScroll() {
+    scrollAmount += 1; // pixels per frame
+    if (scrollAmount >= track.scrollWidth / 2) { // reset to loop
+        scrollAmount = 0;
+    }
+    track.scrollLeft = scrollAmount;
+    requestAnimationFrame(autoScroll);
+}
+
+autoScroll();
+
+</script>
+
 
 </body>
 

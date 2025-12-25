@@ -1,0 +1,488 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #0f172a;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+        url('c1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 120px;
+}
+
+
+
+/* HEADER */
+.hero header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 0;
+}
+
+.hero nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.hero nav a:hover {
+    color: #1d4ed8;
+}
+
+/* HERO TEXT */
+.hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.socials a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+/* CODE BLOCK */
+.code {
+    background: #1e293b;
+    padding: 28px;
+    border-radius: 14px;
+    font-family: monospace;
+    font-size: 15px;
+    color: #38bdf8;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.keyword {
+    color: #f472b6;
+}
+
+.func {
+    color: #22d3ee;
+}
+
+.string {
+    color: #a3e635;
+}
+
+/* SECTIONS */
+section {
+    padding: 120px 0;
+}
+
+/* STICKY SECTION LABEL */
+.section-title {
+    position: sticky;
+    top: 80px;
+    /* below header */
+    z-index: 10;
+    background: #ffffff;
+    padding: 12px 0;
+    font-weight: 700;
+}
+
+/* optional: subtle separator */
+.section-title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    margin-top: 8px;
+    background: linear-gradient(90deg, #22d3ee, #2563eb);
+}
+
+
+/* EXPERIENCE PINNED SCROLL */
+#experience {
+    position: relative;
+    padding: 0;
+}
+
+/* This pins the section */
+.experience-pin {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+}
+
+/* This creates internal scrolling */
+.experience-wrapper {
+    height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Hide scrollbar (optional) */
+.experience-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* EXPERIENCE SECTION */
+.experience-section {
+    position: relative;
+    padding: 140px 0;
+}
+
+.experience-title-pin {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 20;
+    padding-bottom: 16px;
+}
+
+.experience-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
+}
+
+/* Stack container */
+.experience-stack {
+    position: relative;
+    padding-top: 40px;
+    /* space below title + line */
+    padding-bottom: 200px;
+    /* space so last card can unstick */
+}
+
+
+.experience-cards {
+    position: relative;
+    padding-top: 40px;
+}
+
+
+/* Sticky overlapping cards */
+.experience-card {
+    position: sticky;
+    top: 180px;
+    /* below title + gradient line */
+    margin-bottom: 80px;
+    /* SAME GAP BETWEEN ALL CARDS */
+    border-radius: 16px;
+    background: #f8fafc;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .experience-card {
+        position: relative;
+        top: auto !important;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+/* Header */
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #1e293b;
+    color: white;
+    padding: 16px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-header-pin {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 10;
+    padding-bottom: 20px;
+}
+
+
+.experience-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* Line */
+.experience-line {
+    height: 4px;
+    background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
+}
+
+.experience-header h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.experience-card .code {
+    margin: 0;
+    padding: 28px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* =======================
+   SKILLS – SAME AS EXPERIENCE
+======================= */
+
+/* SKILLS RESET */
+#skills {
+    padding-top: 0 !important;
+    padding-bottom: 140px;
+}
+
+/* remove default h2 margin */
+.skills-title {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* STICKY TITLE */
+.skills-title-pin {
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background: #ffffff;
+    padding-bottom: 16px;
+}
+
+.skills-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
+}
+
+/* VERTICAL SCROLL SPACE */
+.skills-stack {
+    position: relative;
+    height: 200vh;
+    /* controls horizontal scroll length */
+}
+
+/* STICKY HORIZONTAL TRACK */
+.skills-track {
+    display: flex;
+    overflow-x: hidden;
+    /* hide scrollbar */
+    gap: 24px;
+    scroll-behavior: smooth;
+    /* smooth scroll */
+
+    padding: 80px 0;
+    margin: 120px 0;
+    /* ✅ space BEFORE & AFTER skills track */
+
+    scroll-behavior: auto;
+}
+
+.skills-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* SKILL CARD – MEDIUM SIZE + DARK MODE */
+.skill-card {
+    flex: 0 0 auto;
+    /* prevents shrinking */
+    width: 140px;
+    /* medium size */
+    height: 160px;
+    background: #1e293b;
+    /* dark mode */
+    color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* LOGO */
+.skill-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 6px 12px rgba(56, 189, 248, 0.35));
+}
+
+/* SKILL NAME */
+.skill-card span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    letter-spacing: 0.4px;
+}
+
+/* HOVER */
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 35px 80px rgba(56, 189, 248, 0.35);
+    cursor: pointer;
+}
+
+
+
+/* MOBILE FALLBACK */
+@media (max-width: 768px) {
+    .skills-stack {
+        height: auto;
+    }
+
+    .skills-track {
+        position: relative;
+        top: auto;
+        overflow-x: auto;
+    }
+}
+
+
+/* =======================
+   Projects – 
+======================= */
+
+#projects {
+    padding-top: 0 !important;
+    padding-bottom: 140px;
+}
+
+#projects h2 {
+    margin: 0;
+}
+
+.projects-title-pin {
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background: #ffffff;
+    padding-bottom: 16px;
+}
+
+.projects-title {
+    font-weight: 700;
+}
+
+.projects-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
+}
+
+.projects-stack {
+    position: relative;
+    padding-top: 40px;
+    /* space below title */
+    padding-bottom: 300px;
+    /* allows last card to unstick */
+}
+
+.project-card {
+    position: sticky;
+    top: 180px;
+    /* BELOW title + gradient line */
+    margin-bottom: 80px;
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        position: relative;
+        top: auto;
+    }
+}
+
+
+
+
+
+
+.contact-btn {
+    border-radius: 6px !important;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.card-custom {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ABOUT IMAGE HOVER */
+.about-img {
+    max-width: 320px;
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* ABOUT ME TAG ONLY */
+.about-tag {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: white;
+    background-color: #1e293b;
+    padding: 10px 8px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.about-me-container h2,
+.about-me-container p {
+    color: #ffffff;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
