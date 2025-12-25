@@ -146,16 +146,15 @@
         }
 
         /* Sticky title */
-        .experience-title {
+        /* .experience-title {
             position: sticky;
             top: 80px;
             z-index: 15;
             background: #ffffff;
             padding-bottom: 16px;
             margin-bottom: 0;
-            /* IMPORTANT */
             font-weight: 700;
-        }
+        } */
 
 
 
@@ -266,6 +265,86 @@
             border-radius: 0;
             box-shadow: none;
         }
+
+        /* =======================
+   SKILLS – SAME AS EXPERIENCE
+======================= */
+
+#skills {
+    min-height: 180vh; /* THIS IS THE KEY */
+    background: #f8fafc;
+    position: relative;
+    padding-top: 0 !important;
+    padding-bottom: 140px;
+}
+
+#skills h2 {
+    margin: 0;
+}
+
+
+/* Sticky Skills Title */
+/* =======================
+   SKILLS – SAME AS EXPERIENCE
+======================= */
+
+.skills-title-pin {
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background: #f8fafc;
+    padding-bottom: 16px;
+}
+
+
+
+
+.skills-title {
+    font-weight: 700;
+}
+
+.skills-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
+}
+
+
+/* Stack container */
+.skills-stack {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 300px;
+}
+
+/* Sticky cards */
+.skill-card {
+    position: sticky;
+    top: 180px;
+    margin-bottom: 80px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+    .skill-card {
+        position: relative;
+        top: auto;
+        margin-bottom: 40px;
+    }
+}
+
+
 
         .contact-btn {
             border-radius: 6px !important;
@@ -417,9 +496,6 @@
                 <div class="experience-title-line"></div>
             </div>
 
-
-
-            
             <!-- STACK -->
             <div class="experience-stack">
 
@@ -489,29 +565,29 @@
 
 
 
-
-
-
-
     <!-- SKILLS -->
-    <section id="skills" class="bg-light">
-        <div class="container">
+    <section id="skills">
+    <div class="container">
 
-            <div class="section-title">
-                <h2>Skills</h2>
-            </div>
+        <!-- STICKY TITLE -->
+        <div class="skills-title-pin">
+            <h2 class="skills-title">Skills</h2>
+        </div>
 
-            <div class="mt-5">
-                <div class="card-custom mb-4">JavaScript, React, Python</div>
-                <div class="card-custom mb-4">Django, REST APIs</div>
-                <div class="card-custom mb-4">SQL, MongoDB</div>
-                <!-- <div class="card-custom mb-4">JavaScript, React, Python</div> -->
-                <div class="card-custom mb-4">Django, REST APIs</div>
-                <div class="card-custom mb-4">SQL, MongoDB</div>
-            </div>
+        <!-- STACK -->
+        <div class="skills-stack">
+
+            <div class="skill-card">JavaScript, React, TypeScript</div>
+            <div class="skill-card">Python, Django, REST APIs</div>
+            <div class="skill-card">SQL, PostgreSQL, MongoDB</div>
+            <div class="skill-card">Git, GitHub, CI/CD</div>
+            <div class="skill-card">Docker, Linux, Deployment</div>
 
         </div>
-    </section>
+    </div>
+</section>
+
+
 
 
     <!-- PROJECTS -->
