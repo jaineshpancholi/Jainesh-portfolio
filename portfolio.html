@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="portfolio.css" rel="stylesheet">
     <title>Jainesh | Portfolio</title>
@@ -14,31 +14,32 @@
 <body>
 
     <!-- HERO / ABOUT -->
-    <section class="hero" id="about">
+    <section class="hero">
         <header>
             <div class="container">
                 <div class="d-flex align-items-center">
                     <div></div>
                     <nav class="ms-auto d-none d-lg-block">
-                        <a href="#about">About</a>
-                        <a href="#experience">Experience</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#education">Education</a>
+                        <a href="#about-me">ABOUT</a>
+                        <a href="#experience">EXPERIENCE</a>
+                        <a href="#skills">SKILLS</a>
+                        <a href="#projects">PROJECTS</a>
+                        <a href="#education">EDUCATION</a>
                     </nav>
                 </div>
             </div>
         </header>
 
         <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="intro row align-items-center g-5">
                 <!-- LEFT -->
                 <div class="col-lg-6">
-                    <h1 class="mb-4">
-                        HEY THERE,<br>
-                        I AM JAINESH PANCHOLI.<br>
-                        I TURN IDEAS INTO CODE.
+                    <h1 class="hero-intro mb-4">
+                        <span class="line-1">HEY THERE,</span><br>
+                        <span class="line-2">I AM JAINESH PANCHOLI.</span><br>
+                        <span class="line-3">I TURN IDEAS INTO CODE.</span>
                     </h1>
+
                     <div class="socials d-flex align-items-center gap-3 mb-4">
                         <a href="https://github.com/jaineshpancholi" target="_blank" aria-label="GitHub">
                             <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"
@@ -269,10 +270,10 @@
 
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="projects-section">
         <div class="container">
 
-            <!-- STICKY TITLE -->
+            <!-- STICKY TITLE + LINE -->
             <div class="projects-title-pin">
                 <h2 class="projects-title">Projects</h2>
             </div>
@@ -280,67 +281,160 @@
             <!-- STACK -->
             <div class="projects-stack">
 
-                <div class="project-card">
-                    AI Dashboard – React, Chart.js, REST APIs
+                <!-- PROJECT 1 -->
+                <div class="project-card experience-card">
+                    <div class="experience-header">
+                        <img src="assests/svg/skills/react.svg" width="44" alt="Project">
+                        <div>
+                            <h4>AI Dashboard</h4>
+                            <small>React · Chart.js · REST APIs</small>
+                        </div>
+                    </div>
+
+                    <div class="experience-line"></div>
+
+                    <div class="code">
+                        <span class="keyword">const</span> project = {<br>
+                        &nbsp;&nbsp;name: <span class="string">"AI Dashboard"</span>,<br>
+                        &nbsp;&nbsp;tools: [<span class="string">"React"</span>, <span
+                            class="string">"Chart.js"</span>],<br>
+                        &nbsp;&nbsp;description: <span class="string">
+                            "Real-time analytics dashboard with dynamic charts and API-driven data"
+                        </span><br>
+                        }
+                    </div>
                 </div>
 
-                <div class="project-card">
-                    FinTech Platform – Django, PostgreSQL, JWT Auth
+                <!-- PROJECT 2 -->
+                <div class="project-card experience-card">
+                    <div class="experience-header">
+                        <img src="assests/svg/skills/django.svg" width="44" alt="Project">
+                        <div>
+                            <h4>FinTech Platform</h4>
+                            <small>Django · PostgreSQL · JWT</small>
+                        </div>
+                    </div>
+
+                    <div class="experience-line"></div>
+
+                    <div class="code">
+                        <span class="keyword">const</span> project = {<br>
+                        &nbsp;&nbsp;name: <span class="string">"FinTech Platform"</span>,<br>
+                        &nbsp;&nbsp;tools: [<span class="string">"Django"</span>, <span
+                            class="string">"PostgreSQL"</span>],<br>
+                        &nbsp;&nbsp;description: <span class="string">
+                            "Secure financial platform with authentication, APIs, and transaction tracking"
+                        </span><br>
+                        }
+                    </div>
                 </div>
 
-                <div class="project-card">
-                    E-commerce System – React, Stripe, Admin Panel
+                <!-- PROJECT 3 -->
+                <div class="project-card experience-card">
+                    <div class="experience-header">
+                        <img src="assests/svg/skills/javascript.svg" width="44" alt="Project">
+                        <div>
+                            <h4>E-commerce System</h4>
+                            <small>React · Stripe · Admin Panel</small>
+                        </div>
+                    </div>
+
+                    <div class="experience-line"></div>
+
+                    <div class="code">
+                        <span class="keyword">const</span> project = {<br>
+                        &nbsp;&nbsp;name: <span class="string">"E-commerce System"</span>,<br>
+                        &nbsp;&nbsp;tools: [<span class="string">"React"</span>, <span
+                            class="string">"Stripe"</span>],<br>
+                        &nbsp;&nbsp;description: <span class="string">
+                            "Full-featured shopping platform with payments and admin dashboard"
+                        </span><br>
+                        }
+                    </div>
                 </div>
 
             </div>
-
         </div>
     </section>
+
+
 
 
     <!-- EDUCATION -->
-    <section id="education" class="bg-light">
-        <div class="container">
-            <h2 class="mb-4">Education</h2>
-            <div class="card-custom">Bachelor's in Computer Engineering</div>
+    <!-- EDUCATION -->
+<section id="education" class="education-section">
+    <div class="container">
+
+        <!-- STICKY TITLE (SAME AS SKILLS) -->
+        <div class="education-title-pin">
+            <h2 class="education-title">Education</h2>
         </div>
-    </section>
+
+        <!-- RIGHT SIDE STACK -->
+        <div class="education-right-stack">
+
+            <div class="education-card-wide">
+                <span class="edu-year">2018 – 2022</span>
+                <h3>Bachelor of Computer Engineering</h3>
+                <p class="edu-place">XYZ University, India</p>
+                <p class="edu-desc">
+                    Strong foundation in data structures, algorithms,
+                    databases, and software engineering.
+                </p>
+            </div>
+
+            <div class="education-card-wide">
+                <span class="edu-year">2023 – Present</span>
+                <h3>Advanced Full-Stack Development</h3>
+                <p class="edu-place">Self-Learning & Online Platforms</p>
+                <p class="edu-desc">
+                    Building scalable applications using React, Django,
+                    REST APIs, authentication, and deployment.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-const reveals = document.querySelectorAll(".reveal");
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
 
-// Reveal animation
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
+        // Reveal animation
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+        reveals.forEach((el) => observer.observe(el));
+
+        // Auto-scroll Skills section
+        const track = document.querySelector(".skills-track");
+        let scrollAmount = 0;
+
+        function autoScroll() {
+            scrollAmount += 1; // pixels per frame
+            if (scrollAmount >= track.scrollWidth / 2) { // reset to loop
+                scrollAmount = 0;
             }
-        });
-    },
-    { threshold: 0.15 }
-);
-reveals.forEach((el) => observer.observe(el));
+            track.scrollLeft = scrollAmount;
+            requestAnimationFrame(autoScroll);
+        }
 
-// Auto-scroll Skills section
-const track = document.querySelector(".skills-track");
-let scrollAmount = 0;
+        autoScroll();
 
-function autoScroll() {
-    scrollAmount += 1; // pixels per frame
-    if (scrollAmount >= track.scrollWidth / 2) { // reset to loop
-        scrollAmount = 0;
-    }
-    track.scrollLeft = scrollAmount;
-    requestAnimationFrame(autoScroll);
-}
-
-autoScroll();
-
-</script>
+    </script>
 
 
 </body>

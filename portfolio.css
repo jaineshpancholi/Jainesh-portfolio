@@ -15,7 +15,73 @@ body {
     padding-top: 120px;
 }
 
+.intro{
+    padding-top: 100px;
+}
 
+@media (max-width: 768px) {
+    .intro{
+    padding-top: 30px;
+}
+}
+
+
+.contact-btn {
+    border-radius: 6px !important;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.card-custom {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ABOUT IMAGE HOVER */
+.about-img {
+    max-width: 320px;
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* ABOUT ME TAG ONLY */
+.about-tag {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: white;
+    background-color: #1e293b;
+    padding: 10px 8px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.about-me-container h2,
+.about-me-container p {
+    color: #ffffff;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* HEADER */
 .hero header {
@@ -366,27 +432,29 @@ section {
    Projects – 
 ======================= */
 
-#projects {
-    padding-top: 0 !important;
-    padding-bottom: 140px;
+
+/* Section spacing */
+.projects-section {
+    position: relative;
+    padding: 140px 0;
 }
 
-#projects h2 {
-    margin: 0;
-}
-
+/* Sticky title container */
 .projects-title-pin {
     position: sticky;
-    top: 0px;
-    z-index: 20;
+    top: 0;
     background: #ffffff;
+    z-index: 20;
     padding-bottom: 16px;
 }
 
+/* Title styling */
 .projects-title {
+    margin: 0;
     font-weight: 700;
 }
 
+/* Gradient line */
 .projects-title::after {
     content: "";
     display: block;
@@ -396,93 +464,180 @@ section {
     background: linear-gradient(90deg, #22d3ee, #2563eb, #a3e635);
 }
 
+/* Stack container */
 .projects-stack {
     position: relative;
-    padding-top: 40px;
-    /* space below title */
-    padding-bottom: 300px;
-    /* allows last card to unstick */
+    padding-top: 40px;     /* space below title */
+    padding-bottom: 200px; /* allows last card to unstick */
 }
 
+/* Sticky stacked cards */
 .project-card {
     position: sticky;
     top: 180px;
-    /* BELOW title + gradient line */
+    /* below title + gradient line */
     margin-bottom: 80px;
-    background: #f8fafc;
+    /* SAME GAP BETWEEN ALL CARDS */
     border-radius: 16px;
-    padding: 30px;
+    background: #f8fafc;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Typography */
+.project-card h4 {
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.project-card p {
+    margin: 0;
+    color: #475569;
+}
+
+/* Mobile fallback */
 @media (max-width: 768px) {
     .project-card {
         position: relative;
         top: auto;
+        margin-bottom: 40px;
     }
 }
 
 
 
-
-
-
-.contact-btn {
-    border-radius: 6px !important;
-    font-weight: 600;
-    margin-top: 20px;
+.experience-card::before,
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+        90deg,
+        #22d3ee,
+        #2563eb,
+        #a3e635,
+        #22d3ee
+    );
+    animation: accentMove 4s linear infinite;
+    z-index: 3;
 }
 
-.card-custom {
-    background: #f8fafc;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+@keyframes accentMove {
+    0% { background-position: 0% 0; }
+    100% { background-position: 200% 0; }
 }
 
-/* ABOUT IMAGE HOVER */
-.about-img {
-    max-width: 320px;
-    border-radius: 16px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+#education {
+    padding-top: 0 !important;
 }
 
-.about-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+/* EDUCATION SECTION BACKGROUND */
+.education-section {
+    position: relative;
+    padding: 160px 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.75),
+                        rgba(255, 255, 255, 0.75)),
+        url('c1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* ABOUT ME TAG ONLY */
-.about-tag {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+/* STICKY TITLE */
+.education-title {
+    position: sticky;
+    top: 0;
+    background: transparent;
+    font-size: 36px;
     font-weight: 700;
-    letter-spacing: 2px;
+    z-index: 10;
+    padding-bottom: 24px;
+}
+
+.education-title-pin {
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background: transparent;
+    padding-bottom: 16px;
+}
+
+/* GRADIENT LINE (SAME AS SKILLS) */
+.education-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(
+        90deg,
+        #22d3ee,
+        #2563eb,
+        #a3e635
+    );
+}
+
+/* RIGHT SIDE STACK */
+.education-right-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 100px;
+    margin-top: 80px;
+}
+
+/* WIDE CARD */
+.education-card-wide {
+    width: 65%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+/* YEAR */
+.edu-year {
     font-size: 14px;
-    color: white;
-    background-color: #1e293b;
-    padding: 10px 8px;
-    border-radius: 8px;
-    margin-right: 20px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 1px;
 }
 
-.about-me-container h2,
-.about-me-container p {
-    color: #ffffff;
+/* TEXT */
+.education-card-wide h3 {
+    margin-top: 10px;
+    font-weight: 700;
 }
 
-/* SCROLL ANIMATION */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+.edu-place {
+    color: #475569;
+    font-weight: 600;
+    margin-top: 6px;
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+.edu-desc {
+    margin-top: 12px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .education-right-stack {
+        align-items: center;
+        gap: 40px;
+    }
+
+    .education-card-wide {
+        width: 100%;
+    }
 }
