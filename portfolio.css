@@ -544,9 +544,9 @@ section {
     position: relative;
     padding: 160px 0;
     background:
-        linear-gradient(rgba(255, 255, 255, 0.75),
-                        rgba(255, 255, 255, 0.75)),
-        url('c1.jpg');
+        linear-gradient(rgba(255, 255, 255, 0.9),
+                        rgba(255, 255, 255, 0.9)),
+        url('ce.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -585,32 +585,113 @@ section {
     );
 }
 
-/* RIGHT SIDE STACK */
-.education-right-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 100px;
+/* MAIN LAYOUT */
+.education-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
     margin-top: 80px;
 }
 
-/* WIDE CARD */
-.education-card-wide {
-    width: 65%;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    position: relative;
+/* LEFT IMAGE */
+.education-left-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* YEAR */
-.edu-year {
-    font-size: 14px;
-    font-weight: 700;
-    color: #2563eb;
-    letter-spacing: 1px;
+.education-left-image img {
+    width: 100%;
+    max-width: 380px;
+    filter: drop-shadow(0 25px 50px rgba(0,0,0,0.3));
 }
+
+
+/* =======================
+   EDUCATION CARDS
+======================= */
+
+
+.education-right-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* CARD */
+.education-card-wide {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: #334155;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    max-width: 1120px;
+    margin-left: auto; /* pushes cards to right */
+}
+
+/* LEFT IMAGE */
+.education-image {
+    flex: 0 0 140px;
+    height: 140px;
+    background: #1e293b;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-image img {
+    max-width: 72px;
+    max-height: 72px;
+    object-fit: contain;
+}
+
+/* RIGHT CONTENT */
+.education-content {
+    color: #e5e7eb;
+}
+
+.edu-year {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #38bdf8;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.education-content h3 {
+    margin: 0 0 6px;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.edu-place {
+    margin: 0 0 6px;
+    font-weight: 600;
+    color: #a3e635;
+    font-size: 1.05rem;
+
+}
+
+.edu-gpa {
+    margin: 0;
+    font-size: 1rem;
+    color: #cbd5f5;
+}
+
+/* HOVER EFFECT */
+.education-card-wide:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 40px 90px rgba(56, 189, 248, 0.35);
+    transition: all 0.35s ease;
+}
+
+
 
 /* TEXT */
 .education-card-wide h3 {
@@ -618,26 +699,17 @@ section {
     font-weight: 700;
 }
 
-.edu-place {
-    color: #475569;
-    font-weight: 600;
-    margin-top: 6px;
-}
 
-.edu-desc {
-    margin-top: 12px;
-    line-height: 1.6;
-    color: #334155;
-}
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .education-right-stack {
-        align-items: center;
+    .education-layout {
+        grid-template-columns: 1fr;
         gap: 40px;
+        text-align: center;
     }
 
     .education-card-wide {
-        width: 100%;
+        flex-direction: column;
     }
 }
