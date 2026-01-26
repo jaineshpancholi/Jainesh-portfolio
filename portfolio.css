@@ -622,7 +622,7 @@ section {
 
 /* CARD */
 .education-card-wide {
-    display: flex;
+    display:flex;
     align-items: center;
     gap: 28px;
     background: #334155;
