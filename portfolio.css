@@ -622,21 +622,23 @@ section {
 
 /* CARD */
 .education-card-wide {
-    display:flex;
+    display: grid;
+    grid-template-columns: 90px 1fr; /* fixed image + flexible content */
     align-items: center;
-    gap: 28px;
+    gap: 58px;
     background: #334155;
     border-radius: 20px;
     padding: 36px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
     max-width: 1120px;
-    margin-left: auto; /* pushes cards to right */
+    min-height: 180px;
 }
 
 /* LEFT IMAGE */
 .education-image {
     flex: 0 0 140px;
     height: 140px;
+    width: 140px;
     background: #1e293b;
     border-radius: 16px;
     display: flex;
