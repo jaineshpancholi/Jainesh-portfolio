@@ -110,6 +110,16 @@ body {
     line-height: 1.2;
 }
 
+.socials img {
+    /* width: 36px; */
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.15);
+}
+
+
 .socials a {
     margin-right: 20px;
     text-decoration: none;
@@ -196,6 +206,11 @@ section {
 }
 
 /* EXPERIENCE SECTION */
+.experience-title {
+    margin: 0;
+    font-weight: 700;
+}
+
 .experience-section {
     position: relative;
     padding: 140px 0;
@@ -323,6 +338,7 @@ section {
     margin: 0;
     font-weight: 700;
 }
+
 
 /* STICKY TITLE */
 .skills-title-pin {
@@ -715,3 +731,118 @@ section {
         flex-direction: column;
     }
 }
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 100px 0;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+/* LEFT FORM BOX */
+.contact-form-box {
+    background: linear-gradient(135deg, #f5f7fa, #334155);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+    box-shadow: none;
+    border-color: #000;
+}
+
+/* RIGHT INFO */
+.contact-info {
+    padding-left: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.80rem;
+}
+
+
+
+.contact-item span {
+    font-weight: 550;
+    color: #334155;
+}
+
+.contact-item img {
+    width: 26px;
+    height: 26px;
+}
+
+/* SOCIAL ICONS */
+.contact-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-socials img {
+    width: 36px;
+    transition: transform 0.3s ease;
+}
+
+.contact-socials img:hover {
+    transform: scale(1.15);
+}
+
+/* FOOTER */
+.site-footer {
+    background: #0f172a; /* dark slate */
+    color: #cbd5e1;
+    padding: 20px 0;
+    position: relative;
+}
+
+.site-footer p {
+    font-size: 14px;
+}
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+    background: #334155;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #38bdf8;
+    color: #020617;
+    transform: translateY(-2px);
+}
+
+/* FOOTER LINK */
+.footer-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #7dd3fc;
+    
+}
+
