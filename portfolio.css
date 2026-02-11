@@ -19,6 +19,29 @@ body {
     padding-top: 10px;
 }
 
+.line-1{
+    font-size: 45px;
+}
+
+.line-2{
+    font-size: 45px;
+}
+
+.line-2 span{
+    color: #2563eb;
+}
+
+.line-3{
+    font-size: 45px;
+}
+
+.line-3 span{
+    color: #3b7562c8;
+}
+.line-4{
+    font-size: 45px;
+}
+
 @media (max-width: 768px) {
     .intro{
     padding-top: 30px;
@@ -301,7 +324,7 @@ section {
     position: relative;
     padding-top: 40px;
     /* space below title + line */
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     /* space so last card can unstick */
 }
 
@@ -454,10 +477,8 @@ section {
     /* hide scrollbar */
     gap: 24px;
     scroll-behavior: smooth;
-    /* smooth scroll */
-
     padding: 80px 0;
-    margin: 120px 0;
+    margin: 20px 0;
     /* ✅ space BEFORE & AFTER skills track */
 
     scroll-behavior: auto;
@@ -585,10 +606,9 @@ section {
 .projects-stack {
     position: relative;
     padding-top: 40px;     /* space below title */
-    padding-bottom: 200px; /* allows last card to unstick */
+   padding-bottom: 60px;  /* allows last card to unstick */
 }
 
-/* Sticky stacked cards */
 .project-card {
     position: sticky;
     top: 180px;
@@ -676,7 +696,7 @@ section {
 /* EDUCATION SECTION BACKGROUND */
 .education-section {
     position: relative;
-    padding: 160px 0;
+    padding: 0 0 60px 0;
     background:
         linear-gradient(rgba(255, 255, 255, 0.9),
                         rgba(255, 255, 255, 0.9)),
